@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif; /* Use a clean font */
+  background: linear-gradient(
+    135deg,
+    #1a1a2e,
+    #16213e
+  ); /* Dark gradient background */
+  color: #eaeaea; /* Light text color for contrast */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Stars Canvas Styles */
+.stars-canvas {
+  position: fixed; /* Fix position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: -1; /* Send it to the background */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(
+    26,
+    26,
+    46,
+    0.9
+  ); /* Semi-transparent dark background */
+  padding: 15px 20px; /* Padding for the navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Main Content Container */
+.main-content {
+  position: relative; /* Ensure main content is positioned relative */
+  flex: 1; /* Allow this container to grow and fill available space */
+  overflow-y: auto; /* Enable vertical scrolling within this container */
+  padding: 20px; /* Optional padding for better layout */
+  z-index: 1; /* Bring main content above the stars */
+}
+
+/* Calendar Container */
+.calendar-container {
+  display: flex;
+  justify-content: center; /* Center the calendar */
+  padding: 50px 20px; /* Add padding around the calendar */
+  margin-top: 40px; /* Add space above the calendar */
+}
+
+/* Month Panel Styles */
+.month-panel {
+  background-color: rgba(74, 144, 226, 0.8); /* Semi-transparent blue */
+  color: white; /* Text color */
+  width: 150px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  display: flex; /* Flexbox for centering text */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth effects */
+}
+
+/* Hover Effect */
+.month-panel:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: rgba(74, 144, 226, 1); /* Change background on hover */
+}

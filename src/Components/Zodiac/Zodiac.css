@@ -1,0 +1,66 @@
+/* Calendar Container */
+.calendar {
+  display: flex; /* Flex layout for arranging panels */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: center; /* Center the panels */
+  padding: 20px; /* Padding around the calendar */
+  gap: 20px; /* Space between panels */
+}
+
+/* Month Panel Styles */
+.month-panel {
+  background-color: #2c2f40; /* Dark starry night background */
+  color: white; /* Default text color */
+  width: 150px; /* Fixed width */
+  height: 220px; /* Fixed height */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-end; /* Place the name at the bottom */
+  padding: 10px; /* Padding for content spacing */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deep shadow effect */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth scaling and color transitions */
+  font-family: "Georgia", serif; /* Classic font style */
+  position: relative; /* Enable positioning for child elements */
+  overflow: hidden; /* Ensure elements don't spill outside the panel */
+}
+
+/* Zodiac Name Styles */
+.month-panel .zodiac-name {
+  font-size: 1.2rem; /* Font size for the zodiac sign */
+  font-weight: bold; /* Bold for emphasis */
+  text-transform: capitalize; /* Ensure names are capitalized */
+  color: #ffffff; /* White text color for contrast */
+  text-align: center; /* Center-align text */
+  padding: 10px 0; /* Padding inside the label */
+
+  bottom: 0; /* Stick it to the bottom of the panel */
+}
+
+/* Hover Effect */
+.month-panel:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #3a3f58; /* Slightly lighter background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .month-panel {
+    width: 120px; /* Adjust width for smaller screens */
+    height: 180px; /* Adjust height for smaller screens */
+  }
+  .month-panel .zodiac-name {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .month-panel {
+    width: 100px; /* Further adjust for mobile screens */
+    height: 160px; /* Further adjust for mobile screens */
+  }
+  .month-panel .zodiac-name {
+    font-size: 0.9rem; /* Further adjust font size */
+  }
+}

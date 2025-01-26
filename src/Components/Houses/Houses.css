@@ -1,0 +1,67 @@
+.houses-section {
+  padding: 20px;
+  color: #fff;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.section-headtext {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.vertical-timeline-container {
+  margin-top: 20px;
+}
+
+.house-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.house-concerns {
+  font-size: 16px;
+  font-weight: 600;
+  color: #9b59b6; /* Bright purple (amethyst) */
+}
+
+.house-details {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.detail-item {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.icon-image {
+  width: 100%; /* Let the image take full width of its container */
+  max-width: 130px; /* Set a maximum size for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image scales proportionally */
+  display: block; /* Center the image */
+  margin: auto; /* Center the image */
+  border-radius: 50%; /* Keep the image circular */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Add depth with a shadow */
+  border: 3px solid #7f7cd9; /* Border with a clean look */
+}
+
+/* Remove any additional background or icon-specific styles */
+.vertical-timeline-element-icon {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: none; /* Remove the background */
+  width: auto; /* Let the image size dictate the layout */
+  height: auto; /* Let the image size dictate the layout */
+  padding: 0; /* Remove padding around the image */
+  box-shadow: none; /* Remove shadow from the background container */
+}
