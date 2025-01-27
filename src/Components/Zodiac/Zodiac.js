@@ -25,7 +25,7 @@ const AstrologicalCalendar = () => {
     },
     {
       name: "Virgo",
-      image: "/images/virgo-2.jpeg",
+      image: "/images/Virgo-2.jpeg",
     },
     {
       name: "Libra",
