@@ -9,15 +9,15 @@ const AstrologicalCalendar = () => {
     },
     {
       name: "Taurus",
-      image: "/images/taurus-2.jpeg",
+      image: "/images/Taurus-2.jpeg",
     },
     {
       name: "Gemini",
-      image: "/images/gemini-2.jpeg",
+      image: "/images/Gemini-2.jpeg",
     },
     {
       name: "Cancer",
-      image: "/images/cancer-2.jpeg",
+      image: "/images/Cancer-2.jpeg",
     },
     {
       name: "Leo",
@@ -25,31 +25,31 @@ const AstrologicalCalendar = () => {
     },
     {
       name: "Virgo",
-      image: "/images/virgo-2.jpeg",
+      image: "/images/Virgo-2.jpeg",
     },
     {
       name: "Libra",
-      image: "/images/libra-2.jpeg",
+      image: "/images/Libra-2.jpeg",
     },
     {
       name: "Scorpio",
-      image: "/images/scorpio-2.jpeg",
+      image: "/images/Scorpio-2.jpeg",
     },
     {
       name: "Sagittarius",
-      image: "/images/sagittarius-2.jpeg",
+      image: "/images/Sagittarius-2.jpeg",
     },
     {
       name: "Capricorn",
-      image: "/images/capricorn-2.jpeg",
+      image: "/images/Capricorn-2.jpeg",
     },
     {
       name: "Aquarius",
-      image: "/images/aquarius-2.jpeg",
+      image: "/images/Aquarius-2.jpeg",
     },
     {
       name: "Pisces",
-      image: "/images/pisces-2.jpeg",
+      image: "/images/Pisces-2.jpeg",
     },
   ];
 
