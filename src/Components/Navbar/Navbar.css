@@ -29,6 +29,7 @@
   color: #f0f0f0;
   font-size: 24px;
   font-weight: bold;
+  font-family: "AstrologicalFont", sans-serif; /* Use your desired astrological font here */
 }
 
 /* Navigation Links */
@@ -40,20 +41,20 @@
 }
 
 .nav-links li {
-  color: #f0f0f0;
+  color: #ffffff !important; /* White color */
   font-size: 18px;
+  font-weight: bold; /* Bold text */
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li:hover {
-  color: #ff6347;
   transform: scale(1.1);
 }
 
 .nav-links li.active-link {
   font-weight: bold;
-  color: #7255b0;
+  color: #ff6347;
 }
 
 /* Menu Icon for Mobile */
@@ -93,7 +94,8 @@
 
   .nav-links li {
     font-size: 18px; /* Keep consistent font size */
-    color: #f0f0f0; /* Ensure readability */
+    color: #ffffff; /* Ensure readability */
+    font-weight: bold; /* Bold font for links */
   }
 
   .menu-icon {
@@ -118,6 +120,7 @@
 
     .logo {
       font-size: 20px;
+      font-family: "AstrologicalFont", sans-serif;
     }
 
     .nav-links {

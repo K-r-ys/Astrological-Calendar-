@@ -1,10 +1,10 @@
-// App.js
+import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.js";
 import Zodiac from "./Components/Zodiac/Zodiac.js";
 import Houses from "./Components/Houses/Houses.js";
-import StarsCanvas from "./Components/Canvas/Stars.jsx"; // Adjust the path as necessary
-import Credit from "./Components/Footer/Credit.js"; // Import the Credit component
+import StarsCanvas from "./Components/Canvas/Stars.jsx";
+import Credit from "./Components/Footer/Credit.js";
 
 function App() {
   return (
@@ -15,21 +15,22 @@ function App() {
       {/* Navbar Component */}
       <Navbar />
 
-      {/* Main Content Container */}
+      {/* Main Content */}
       <div className="main-content">
-        <div className="calendar-container">
-          <Zodiac /> {/* Include the Astrological Calendar component */}
+        {/* Home Section */}
+        <div id="home" className="calendar-container">
+          <Zodiac /> {/* Zodiac component as Home */}
         </div>
 
-        {/* Houses Component */}
-        <div className="houses-container">
-          <Houses /> {/* Include the Astrological Houses component */}
+        {/* Houses Section */}
+        <div id="houses" className="houses-container">
+          <Houses /> {/* Houses */}
         </div>
-      </div>
 
-      {/* Credit Component */}
-      <div className="credit-container">
-        <Credit /> {/* Include the Credit panels */}
+        {/* Credits Section */}
+        <div id="credits" className="credit-container">
+          <Credit /> {/* Credits */}
+        </div>
       </div>
     </div>
   );

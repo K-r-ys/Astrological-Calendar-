@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,24 +21,55 @@ const Navbar = () => {
       <div className="navbar-content">
         <h1 className="logo">Astrological Calendar</h1>
 
+        {/* Navbar Links */}
         <ul className={`nav-links ${toggle ? "active" : ""}`}>
-          <li
-            onClick={() => setActive("Home")}
-            className={active === "Home" ? "active-link" : ""}
-          >
-            Home
+          <li>
+            <a
+              href="#home"
+              onClick={() => setToggle(false)}
+              style={{
+                color: "#ffffff", // White color for the link
+                fontWeight: "bold", // Bold font for the link
+                fontSize: "18px", // Set font size for the link
+                cursor: "pointer", // Pointer cursor on hover
+                transition: "color 0.3s ease, transform 0.3s ease", // Smooth color and transform transition
+                textDecoration: "none", // Remove underline
+              }}
+            >
+              Home
+            </a>
           </li>
-          <li
-            onClick={() => setActive("Zodiac")}
-            className={active === "Zodiac" ? "active-link" : ""}
-          >
-            Houses
+          <li>
+            <a
+              href="#houses"
+              onClick={() => setToggle(false)}
+              style={{
+                color: "#ffffff", // White color for the link
+                fontWeight: "bold", // Bold font for the link
+                fontSize: "18px", // Set font size for the link
+                cursor: "pointer", // Pointer cursor on hover
+                transition: "color 0.3s ease, transform 0.3s ease", // Smooth color and transform transition
+                textDecoration: "none", // Remove underline
+              }}
+            >
+              Houses
+            </a>
           </li>
-          <li
-            onClick={() => setActive("Contact")}
-            className={active === "Contact" ? "active-link" : ""}
-          >
-            Credits
+          <li>
+            <a
+              href="#credits"
+              onClick={() => setToggle(false)}
+              style={{
+                color: "#ffffff", // White color for the link
+                fontWeight: "bold", // Bold font for the link
+                fontSize: "18px", // Set font size for the link
+                cursor: "pointer", // Pointer cursor on hover
+                transition: "color 0.3s ease, transform 0.3s ease", // Smooth color and transform transition
+                textDecoration: "none", // Remove underline
+              }}
+            >
+              Credits
+            </a>
           </li>
         </ul>
 

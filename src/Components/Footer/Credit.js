@@ -1,18 +1,7 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import "./Credit.css";
-
-const ServiceCard = ({ title, icon }) => (
-  <Tilt className="service-card">
-    <motion.div whileHover={{ scale: 1.05 }} className="card-container">
-      <div className="card-content">
-        <img src={icon} alt={title} className="card-icon" />
-        <h3 className="card-title">{title}</h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
 
 const Panels = () => {
   const services = [
@@ -20,24 +9,56 @@ const Panels = () => {
     { title: "Christopher", icon: "/images/Christopher.jpeg" },
   ];
 
+  const partingShotText =
+    "~Surrender to the rhythm of the cosmos and the universe will carry you home~";
+
+  const [inView, setInView] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    const currentRef = ref.current; // Store ref.current in a variable
+
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef); // Use the stored variable in cleanup
+    };
+  }, []);
+
   return (
     <div className="panels-container">
-      {/* Credits header at the top */}
       <h2 className="credits-header">Credits</h2>
-
-      {/* Service cards after the header */}
       <div className="cards-container">
         {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
+          <Tilt key={index} className="service-card">
+            <motion.div whileHover={{ scale: 1.05 }} className="card-container">
+              <div className="card-content">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="card-icon"
+                />
+                <h3 className="card-title">{service.title}</h3>
+              </div>
+            </motion.div>
+          </Tilt>
         ))}
       </div>
-
-      {/* Parting shot text at the bottom */}
-      <div className="parting-shot">
-        <p>
-          ~Surrender to the rythm of the cosmos and the universe will carry you
-          home~{" "}
-        </p>
+      <div ref={ref} className="parting-shot">
+        {partingShotText.split("").map((letter, index) => (
+          <motion.span
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 1, delay: index * 0.1 }}
+          >
+            {letter}
+          </motion.span>
+        ))}
       </div>
     </div>
   );
