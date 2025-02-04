@@ -8,7 +8,7 @@ body {
   ); /* Dark gradient background */
   color: #eaeaea; /* Light text color for contrast */
   overflow-y: auto; /* Enable vertical scrolling */
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Minimum height set to viewport, extends with content */
 }
 
 /* Stars Canvas Styles */
