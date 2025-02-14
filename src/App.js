@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.js";
 import Zodiac from "./Components/Zodiac/Zodiac.js";
@@ -24,7 +24,15 @@ const zodiacIndexes = {
 };
 
 function App() {
-  const [selectedZodiac, setSelectedZodiac] = useState(null); // Track the selected zodiac
+  const [selectedZodiac, setSelectedZodiac] = useState(null);
+
+  // Preload all zodiac images when the app loads
+  useEffect(() => {
+    Object.values(zodiacIndexes).forEach((index) => {
+      const img = new Image();
+      img.src = `/images/calendar/${index}.png`; // Adjust the path if necessary
+    });
+  }, []);
 
   return (
     <div className={`App ${selectedZodiac ? "blurred" : ""}`}>
