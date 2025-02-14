@@ -48,13 +48,10 @@
 }
 
 .credits-header {
-  font-size: 32px; /* Larger font size for emphasis */
-  font-weight: bold; /* Bold text */
-  color: #6a5acd; /* A shade of purple for an astrological theme */
-  text-align: center; /* Center align the text */
-  margin-bottom: 40px; /* Space below the header */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-  font-family: "Georgia", serif; /* Elegant font for astrological theme */
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .cards-container {
@@ -67,8 +64,13 @@
 .parting-shot {
   font-size: 18px; /* Appropriate font size */
   font-weight: normal;
-  color: #5de1f6; /* Matching the color theme */
+  color: #9b59b6; /* Matching the color theme */
   text-align: center; /* Center align the text */
   margin-top: 40px; /* Space above the text */
   font-family: "Georgia", serif; /* Elegant font for consistency */
+}
+.section-subtext {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 10px;
 }

@@ -31,6 +31,7 @@ const Panels = () => {
 
   return (
     <div className="panels-container">
+      <p className="section-subtext">Acknowledging the Stars</p>
       <h2 className="credits-header">Credits</h2>
       <div className="cards-container">
         {services.map((service, index) => (

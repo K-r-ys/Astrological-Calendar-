@@ -10,7 +10,7 @@ const AstrologicalCalendar = ({ onSelectZodiac }) => {
     },
     {
       name: "Taurus",
-      image: "/images/Taurus-3.jpeg",
+      image: "/images/Taurus-3.webp",
       dates: ["April 20", "May 20"],
     },
     {

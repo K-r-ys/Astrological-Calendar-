@@ -9,129 +9,139 @@ import "react-vertical-timeline-component/style.min.css";
 const astrologicalHouses = [
   {
     name: "First House",
-    concerns: "Self, Appearance, Beginnings",
-    dates: "Influence: Lifetime",
+    concerns: "Self, Appearance, Identity",
+    dates: "March 21 - April 19",
+    rulingPlanet: "Mars",
     iconPath: "/images/Aries.jpeg",
     details: [
-      "Represents identity and self-expression.",
-      "Focuses on physical appearance and first impressions.",
+      "Represents self-image, personal identity, and first impressions.",
+      "Associated with confidence, leadership, and new beginnings.",
     ],
   },
   {
     name: "Second House",
     concerns: "Money, Possessions, Values",
-    dates: "Influence: Lifetime",
+    dates: "April 20 - May 20",
+    rulingPlanet: "Venus",
     iconPath: "/images/Taurus.jpeg",
     details: [
-      "Deals with personal resources and income.",
-      "Reflects material security and self-worth.",
+      "Deals with financial security, self-worth, and material possessions.",
+      "Represents stability, comfort, and personal values.",
     ],
   },
   {
     name: "Third House",
-    concerns: "Communication, Siblings, Learning",
-    dates: "Influence: Lifetime",
+    concerns: "Communication, Learning, Siblings",
+    dates: "May 21 - June 20",
+    rulingPlanet: "Mercury",
     iconPath: "/images/Gemini.jpeg",
     details: [
-      "Focuses on intellect and learning.",
-      "Represents interactions with siblings and close relatives.",
+      "Focuses on thinking, speaking, writing, and relationships with siblings.",
+      "Represents curiosity, learning, and everyday interactions.",
     ],
   },
   {
     name: "Fourth House",
     concerns: "Home, Family, Foundations",
-    dates: "Influence: Lifetime",
+    dates: "June 21 - July 22",
+    rulingPlanet: "Moon",
     iconPath: "/images/Cancer.jpeg",
     details: [
-      "Represents family, ancestry, and home environment.",
-      "Focuses on emotional security and childhood foundations.",
+      "Represents emotional security, home life, and family roots.",
+      "Deals with childhood experiences and personal comfort zones.",
     ],
   },
   {
     name: "Fifth House",
-    concerns: "Creativity, Romance, Fun",
-    dates: "Influence: Lifetime",
+    concerns: "Creativity, Romance, Joy",
+    dates: "July 23 - August 22",
+    rulingPlanet: "Sun",
     iconPath: "/images/Leo.jpeg",
     details: [
-      "Deals with self-expression, hobbies, and leisure.",
-      "Represents romantic relationships and children.",
+      "Associated with artistic expression, love affairs, and entertainment.",
+      "Represents passion, hobbies, and personal joy.",
     ],
   },
   {
     name: "Sixth House",
-    concerns: "Health, Work, Daily Routines",
-    dates: "Influence: Lifetime",
+    concerns: "Health, Work, Routines",
+    dates: "August 23 - September 22",
+    rulingPlanet: "Mercury",
     iconPath: "/images/Virgo.jpeg",
     details: [
-      "Focuses on physical health, service, and responsibilities.",
-      "Represents daily habits and work ethics.",
+      "Focuses on daily habits, wellness, and responsibility.",
+      "Deals with work-life balance and self-care routines.",
     ],
   },
   {
     name: "Seventh House",
     concerns: "Partnerships, Marriage, Contracts",
-    dates: "Influence: Lifetime",
+    dates: "September 23 - October 22",
+    rulingPlanet: "Venus",
     iconPath: "/images/Libra.jpeg",
     details: [
-      "Deals with relationships, both personal and professional.",
-      "Focuses on cooperation and legal agreements.",
+      "Governs one-on-one relationships, both romantic and business.",
+      "Represents cooperation, balance, and legal agreements.",
     ],
   },
   {
     name: "Eighth House",
-    concerns: "Transformation, Shared Resources, Death",
-    dates: "Influence: Lifetime",
+    concerns: "Transformation, Shared Resources, Deep Bonds",
+    dates: "October 23 - November 21",
+    rulingPlanet: "Pluto (Mars traditionally)",
     iconPath: "/images/Scorpio.jpeg",
     details: [
-      "Represents joint finances, inheritance, and deep bonds.",
-      "Focuses on personal transformation and endings.",
+      "Deals with personal growth, transformation, and deep emotional connections.",
+      "Represents shared finances, inheritances, and major life changes.",
     ],
   },
   {
     name: "Ninth House",
     concerns: "Travel, Philosophy, Higher Education",
-    dates: "Influence: Lifetime",
+    dates: "November 22 - December 21",
+    rulingPlanet: "Jupiter",
     iconPath: "/images/Sagittarius.jpeg",
     details: [
-      "Focuses on long-distance travel and cultural exploration.",
-      "Represents beliefs, spirituality, and advanced learning.",
+      "Focuses on wisdom, spirituality, and adventure.",
+      "Represents belief systems, exploration, and expanding one's perspective.",
     ],
   },
   {
     name: "Tenth House",
     concerns: "Career, Reputation, Public Life",
-    dates: "Influence: Lifetime",
+    dates: "December 22 - January 19",
+    rulingPlanet: "Saturn",
     iconPath: "/images/Capricorn.jpeg",
     details: [
-      "Deals with career aspirations, achievements, and legacy.",
-      "Represents public image and authority.",
+      "Deals with ambition, legacy, and long-term goals.",
+      "Represents career, success, and personal reputation.",
     ],
   },
   {
     name: "Eleventh House",
-    concerns: "Friends, Community, Goals",
-    dates: "Influence: Lifetime",
+    concerns: "Friends, Community, Future Goals",
+    dates: "January 20 - February 18",
+    rulingPlanet: "Uranus (Saturn traditionally)",
     iconPath: "/images/Aquarius.jpeg",
     details: [
-      "Represents social networks, friendships, and humanitarian efforts.",
-      "Focuses on collective goals and future aspirations.",
+      "Represents friendships, teamwork, and humanitarian efforts.",
+      "Focuses on social impact, networking, and dreams for the future.",
     ],
   },
   {
     name: "Twelfth House",
-    concerns: "Endings, Solitude, Secrets",
-    dates: "Influence: Lifetime",
+    concerns: "Spirituality, Endings, Hidden Truths",
+    dates: "February 19 - March 20",
+    rulingPlanet: "Neptune (Jupiter traditionally)",
     iconPath: "/images/Pisces.jpeg",
     details: [
-      "Represents spirituality, solitude, and introspection.",
-      "Deals with karmic cycles and subconscious fears.",
+      "Represents introspection, solitude, and subconscious thoughts.",
+      "Deals with closure, past-life influences, and hidden truths.",
     ],
   },
 ];
 
 const Houses = () => {
-  console.log("Houses component rendered");
-
   return (
     <div className="houses-section">
       <div className="text-center">
@@ -146,21 +156,18 @@ const Houses = () => {
               key={index}
               contentStyle={{ background: "#1d1836", color: "#fff" }}
               contentArrowStyle={{ borderRight: "7px solid #232631" }}
-              date={house.dates}
-              iconStyle={{ background: "transparent", border: "none" }} // This line is already present
+              date={`${house.dates} | Ruling Planet: ${house.rulingPlanet}`}
+              iconStyle={{ background: "transparent", border: "none" }}
               icon={
                 <img
                   src={house.iconPath}
-                  alt={`${house.name} icon`}
+                  alt={house.name}
                   className="icon-image"
                 />
               }
             >
-              <div>
-                <h3 className="house-title">{house.name}</h3>
-                <p className="house-concerns">{house.concerns}</p>
-              </div>
-
+              <h3 className="house-title">{house.name}</h3>
+              <p className="house-concerns">{house.concerns}</p>
               <ul className="house-details">
                 {house.details.map((detail, i) => (
                   <li key={i} className="detail-item">
