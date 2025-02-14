@@ -3,82 +3,36 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  height: 60%;
   border-radius: 12px;
-  overflow: hidden;
   z-index: 1000;
-  background-color: #181818; /* Dark background color */
 }
 
-.calendar-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: white;
-  font-family: "Arial", sans-serif;
-}
-
-.left-panel {
-  background: linear-gradient(
-    to bottom right,
-    #f794a8,
-    #fce38a
-  ); /* Mars-like gradient */
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-panel h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333; /* Dark text for contrast */
-}
-
-.right-panel {
-  background: #282828; /* Slightly lighter dark background */
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  padding: 40px;
-}
-
-.right-panel h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.right-panel ul {
-  list-style: disc;
-  padding-left: 20px;
-  font-size: 1.2rem;
-  line-height: 1.8;
+.zodiac-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
 }
 
 .back-button {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 15px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .back-button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
 }
